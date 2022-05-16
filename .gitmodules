@@ -1,6 +1,0 @@
-[submodule "DicomConverter"]
-	path = DicomConverter
-	url = https://github.com/Gommash/DicomConverter
-[submodule "ImageManipulator"]
-	path = ImageManipulator
-	url = https://github.com/Gommash/ImageManipulator
