@@ -1,6 +1,6 @@
 package imagemanipulator_macros;
 
-public class HistogramEqualization extends ImageMacro {
+public class HistogramEqualization extends ImageMacroPython {
 	
 	public HistogramEqualization(float value, boolean addOnTop) {
 		super(!addOnTop);

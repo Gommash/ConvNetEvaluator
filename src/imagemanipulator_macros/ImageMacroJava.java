@@ -8,27 +8,19 @@ import java.util.Map;
 import configurator.Configurator;
 import consolecommunicator.ConsoleCommunicator;
 
-public class ImageMacro implements IMacro {
+public class ImageMacroJava implements IMacro {
 	protected Map<String,String> arguments;
+	protected String scriptPath;
 	
-	public ImageMacro() {
-		this(true);
-	}
-	
-	public ImageMacro(boolean isFirstMacro) {
+	public ImageMacroJava() {
 		arguments = new HashMap<String,String>();
-		if(isFirstMacro)
-			arguments.put("-i",Configurator.getPropertyValue("imagetoolset.properties","imgpath"));
-		else
-			arguments.put("-i",Configurator.getPropertyValue("imagetoolset.properties","outputpath"));
-		arguments.put("-o",Configurator.getPropertyValue("imagetoolset.properties","outputpath"));
+		arguments.put("-s",Configurator.getPropertyValue("imagetoolset.properties","imgpath"));
+
 	}
 
 	@Override
 	public void execute() {
 		List<String> args = new ArrayList<String>();
-		args.add(Configurator.getPropertyValue("imagetoolset.properties", "scriptype"));
-		args.add(Configurator.getPropertyValue("imagetoolset.properties", "script-path"));
 		for(Map.Entry<String, String> argument : arguments.entrySet()) {
 			args.add(argument.getKey());
 			args.add(argument.getValue());

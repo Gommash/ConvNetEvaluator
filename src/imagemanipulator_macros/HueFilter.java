@@ -1,6 +1,6 @@
 package imagemanipulator_macros;
 
-public class HueFilter extends ImageMacro {
+public class HueFilter extends ImageMacroPython {
 	
 	public HueFilter(float value, boolean addOnTop) {
 		super(!addOnTop);

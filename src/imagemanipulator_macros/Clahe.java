@@ -1,6 +1,6 @@
 package imagemanipulator_macros;
 
-public class Clahe extends ImageMacro {
+public class Clahe extends ImageMacroPython {
 	
 	public Clahe(int tilegridwidth, int tilegridheight,int cliplimit, boolean addOnTop) {
 		this(tilegridwidth,tilegridheight,cliplimit,0,addOnTop);

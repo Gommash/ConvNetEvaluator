@@ -1,6 +1,6 @@
 package imagemanipulator_macros;
 
-public class NLMeansDenoise extends ImageMacro {
+public class NLMeansDenoise extends ImageMacroPython {
 	
 	public NLMeansDenoise(int patchSize,int patchDistance, float h,boolean fastMode, boolean addOnTop) {
 		super(!addOnTop);

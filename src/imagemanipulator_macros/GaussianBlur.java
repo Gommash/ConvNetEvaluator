@@ -1,6 +1,6 @@
 package imagemanipulator_macros;
 
-public class GaussianBlur extends ImageMacro {
+public class GaussianBlur extends ImageMacroPython {
 	
 	public GaussianBlur(int width, int height,boolean addOnTop) {
 		super(!addOnTop);
