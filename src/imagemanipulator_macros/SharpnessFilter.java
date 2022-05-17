@@ -1,6 +1,6 @@
 package imagemanipulator_macros;
 
-public class SharpnessFilter extends ImageMacro {
+public class SharpnessFilter extends ImageMacroPython {
 	
 	public SharpnessFilter(float value, boolean addOnTop) {
 		super(!addOnTop);

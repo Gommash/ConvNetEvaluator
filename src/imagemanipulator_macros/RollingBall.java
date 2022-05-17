@@ -1,6 +1,6 @@
 package imagemanipulator_macros;
 
-public class RollingBall extends ImageMacro {
+public class RollingBall extends ImageMacroPython {
 	
 	public RollingBall(float ballSize, boolean invert, boolean addOnTop) {
 		super(!addOnTop);
