@@ -11,6 +11,10 @@ import consolecommunicator.ConsoleCommunicator;
 public class ImageMacroPython implements IMacro {
 	protected Map<String,String> arguments;
 	
+	public ImageMacroPython(boolean isFirstMacro) {
+		this("","",isFirstMacro);
+	}
+	
 	public ImageMacroPython() {
 		this("","",true);
 	}
