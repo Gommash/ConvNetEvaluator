@@ -12,16 +12,16 @@ public class ImageMacroPython implements IMacro {
 	protected Map<String,String> arguments;
 	
 	public ImageMacroPython() {
-		this(true);
+		this("","",true);
 	}
 	
-	public ImageMacroPython(boolean isFirstMacro) {
+	public ImageMacroPython(String imgPath, String saveToPath, boolean isFirstMacro) {
 		arguments = new HashMap<String,String>();
 		if(isFirstMacro)
-			arguments.put("-i",Configurator.getPropertyValue("imagetoolset.properties","imgpath"));
+			arguments.put("-i",imgPath);
 		else
-			arguments.put("-i",Configurator.getPropertyValue("imagetoolset.properties","outputpath"));
-		arguments.put("-o",Configurator.getPropertyValue("imagetoolset.properties","outputpath"));
+			arguments.put("-i",saveToPath);
+		arguments.put("-o",saveToPath);
 	}
 
 	@Override
