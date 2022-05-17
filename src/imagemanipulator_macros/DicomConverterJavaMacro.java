@@ -8,11 +8,11 @@ import java.util.Map;
 import configurator.Configurator;
 import consolecommunicator.ConsoleCommunicator;
 
-public class ImageMacroJava implements IMacro {
+public class DicomConverterJavaMacro implements IMacro {
 	protected Map<String,String> arguments;
 	protected String scriptPath;
 	
-	public ImageMacroJava() {
+	public DicomConverterJavaMacro() {
 		arguments = new HashMap<String,String>();
 		arguments.put("-s",Configurator.getPropertyValue("imagetoolset.properties","imgpath"));
 
@@ -21,6 +21,8 @@ public class ImageMacroJava implements IMacro {
 	@Override
 	public void execute() {
 		List<String> args = new ArrayList<String>();
+		args.add("java");
+		args.add(Configurator.getPropertyValue("imagetoolset.properties", "script-path2"));
 		for(Map.Entry<String, String> argument : arguments.entrySet()) {
 			args.add(argument.getKey());
 			args.add(argument.getValue());
